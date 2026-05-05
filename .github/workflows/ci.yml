@@ -26,6 +26,10 @@ jobs:
           languages: java-kotlin
           build-mode: none
           queries: security-and quality
- 
-
+          
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:java-kotlin"
+      
 
