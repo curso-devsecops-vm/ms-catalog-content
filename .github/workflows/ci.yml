@@ -68,7 +68,7 @@ jobs:
           password: ${{secrets.PASS_DOCKER}}    
       - name : Docker build
         run: | 
-         docker build --tag  vitoko25/ms-catalog-content:lastest.
+         docker build --tag  vitoko25/ms-catalog-content:lastest .
 
       - name : docker push
         run : |
