@@ -70,6 +70,13 @@ jobs:
         run: | 
          docker build --tag  vitoko25/ms-catalog-content:lastest .
 
+      - name: Aqua Security Trivy
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          format: 'table'
+          exit-code: '1'
+          vuln-type: 'os,library'
+                  
       - name : docker push
         run : |
           docker  push vitoko25/ms-catalog-content:lastest
