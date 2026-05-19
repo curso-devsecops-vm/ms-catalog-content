@@ -73,13 +73,13 @@ jobs:
                   
       - name : docker push
         run : |
-          docker  push vitoko25/ms-catalog-content:lastest
+          docker  push vitoko25/ms-catalog-content:latest
 
       
       - name: Aqua Security Trivy
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          imagem-ref: 'vitoko25/ms-catalog-content:latest'
+          image-ref: 'vitoko25/ms-catalog-content:latest'
           format: 'table'
           exit-code: '1'
           vuln-type: 'os,library'
