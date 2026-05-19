@@ -72,5 +72,5 @@ jobs:
 
       - name : docker push
         run : |
-          docker  push vitoko25/ms-catalog-content:lastest . 
+          docker  push vitoko25/ms-catalog-content:lastest
       
